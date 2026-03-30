@@ -16,11 +16,11 @@ private:
 
 public:
 	//Constructor
-	PoliceOfficer(const std::string& name, const std::string& badgeNumber);
+	PoliceOfficer(const string& officerName = "", const string& badge = "");
 
 	//Accessor functions
-	std::string getName() const;
-	std::string getBadgeNumber() const;
+	string getName() const;
+	string getBadgeNumber() const;
 
 	//Inspects the parked car and parking meter, and returns a pointer to a ParkingTicket
 	//if the car is in violation, or nullptr if there is no violation.
