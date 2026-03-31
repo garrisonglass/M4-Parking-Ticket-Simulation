@@ -128,9 +128,11 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="M4 Parking Ticket Simulation.cpp" />
+    <ClCompile Include="ParkingTicket.cpp" />
     <ClCompile Include="PoliceOfficer.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="ParkingTicket.h" />
     <ClInclude Include="PoliceOfficer.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
