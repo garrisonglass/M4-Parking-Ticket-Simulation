@@ -129,11 +129,13 @@
   <ItemGroup>
     <ClCompile Include="M4 Parking Ticket Simulation.cpp" />
     <ClCompile Include="ParkedCar.cpp" />
+    <ClCompile Include="ParkingMeter.cpp" />
     <ClCompile Include="ParkingTicket.cpp" />
     <ClCompile Include="PoliceOfficer.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ParkedCar.h" />
+    <ClInclude Include="ParkingMeter.h" />
     <ClInclude Include="ParkingTicket.h" />
     <ClInclude Include="PoliceOfficer.h" />
   </ItemGroup>
