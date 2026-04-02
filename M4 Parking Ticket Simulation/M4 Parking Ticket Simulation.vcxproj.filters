@@ -24,12 +24,18 @@
     <ClCompile Include="ParkingTicket.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="ParkedCar.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="PoliceOfficer.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="ParkingTicket.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ParkedCar.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
