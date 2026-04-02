@@ -22,17 +22,18 @@ public:
 	
 	//constructo
 	ParkedCar(const string& year = "",
-		const string& make = "",
-		const string& model = "",
-		const string& color = "",
-		const string& plate = "",
-		int minutesParked = 0);
+		      const string& make = "",
+		      const string& model = "",
+		      const string& color = "",
+		      const string& plate = "",
+		      int minutesParked = 0);
 	
 	//Accessors
 	string getYear()    const { return year; }
-	string getmake()    const { return make; }
-	string getmodel()   const { return model; }
-	string getlicense() const { return plate; }
+	string getMake()    const { return make; }
+	string getModel()   const { return model; }
+	string getLicense() const { return plate; }
+	string getColor()   const { return color; }
 	int getMinutesParked() const { return minutesParked; }
 
 };
