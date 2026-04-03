@@ -20,7 +20,7 @@ ParkingTicket::ParkingTicket(const ParkedCar& car, const PoliceOfficer& officer,
 }
 
 //Fine calculation
-double ParkingTicket::calculateFine(int minutesOver) const
+double ParkingTicket::calulateFine(int minutesOver) const
 {
 	if (minutesOver <= 0)
 	{
