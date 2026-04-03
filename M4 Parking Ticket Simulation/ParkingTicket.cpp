@@ -2,6 +2,7 @@
 #include "PoliceOfficer.h"
 #include <cmath>
 #include <ostream>
+#include <iomanip>
 
 using namespace std;
 //Constructor
@@ -39,11 +40,17 @@ double ParkingTicket::calculateFine(int minutesOver) const
 
 ostream& operator<<(ostream& out, const ParkingTicket& ticket)
 {
-	out << "Parking Ticket:\n";
-	out << "License Plate: " << ticket.plate << ", Year: " << ticket.year << ", Make: " << ticket.make 
-		<< ", Model: " << ticket.model << ", Color: " << ticket.color << "\n";
-	out << "Officer: " << ticket.officerName << ", Badge: " << ticket.badgeNumber << "\n";
-	out << "Minutes Over: " << ticket.minutesOver << ", Fine Amount: $" << ticket.fineAmount;
+	out << "-------- Parking Ticket ---------\n\n";
+	out << "Officer: " << ticket.officerName << ", Badge# " << ticket.badgeNumber << "\n\n";
+	out << "------ Vehicle Information ------\n\n";
+	out << left << setw(5) << "License Plate: " << ticket.plate << "\n";
+	out << left << setw(15) << "Year: " << ticket.year << "\n";
+	out << left << setw(15) << "Make: " << ticket.make << "\n";
+	out << left << setw(15) << "Model: " << ticket.model << "\n";
+	out << left << setw(15) << "Color: " << ticket.color << "\n\n";
+	out << "------- Violation Details -------\n\n";
+	out << left << setw(15) << "Minutes Over: " << ticket.minutesOver << "\n";
+	out << left << setw(15) << "Fine:" << "$" << ticket.fineAmount;
 	
 	return out;
 }

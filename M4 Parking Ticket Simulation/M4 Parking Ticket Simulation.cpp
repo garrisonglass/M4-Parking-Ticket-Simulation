@@ -40,7 +40,7 @@ int main()
 	PrintTicket(ticket1);
 
 	//Test 2: Small violation (10 minutes over)
-	cout << "Test 2: Small Violation\n";
+	cout << "Test 2: Small Violation\n\n";
 
 	ParkedCar car2("2020", "Honda", "Civic", "Black", "123ABC", 70);//Parked 10 minutes over the limet
 	ParkingMeter meter2(60);//Purchased 60 minutes
