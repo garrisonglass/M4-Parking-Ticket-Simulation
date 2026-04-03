@@ -1,4 +1,6 @@
 #include "PoliceOfficer.h"
+#include "ParkingTicket.h"
+
 using namespace std;
 
 //Constructor

@@ -32,8 +32,8 @@ public:
 	string getYear()    const { return year; }
 	string getMake()    const { return make; }
 	string getModel()   const { return model; }
-	string getLicense() const { return plate; }
 	string getColor()   const { return color; }
+	string getLicense() const { return plate; }
 	int getMinutesParked() const { return minutesParked; }
 
 };

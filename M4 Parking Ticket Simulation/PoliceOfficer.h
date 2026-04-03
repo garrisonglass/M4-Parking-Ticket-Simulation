@@ -2,11 +2,12 @@
 #define POLICEOFFICER_H
 
 #include <string>
-#include <ParkedCar.h>
-#include <ParkingMeter.h>
-#include <ParkingTicket>
-
+#include "ParkedCar.h"
+#include "ParkingMeter.h"
+//#include "ParkingTicket.h" 
+class ParkingTicket;
 using namespace std;
+
 
 class PoliceOfficer
 {
@@ -19,13 +20,15 @@ public:
 	PoliceOfficer(const string& officerName = "", const string& badge = "");
 
 	//Accessor functions
-	string getName() const;
-	string getBadgeNumber() const;
+	string getName() const { return name; }
+	string getBadgeNumber() const { return badgeNumber; }
 
 	//Inspects the parked car and parking meter, and returns a pointer to a ParkingTicket
 	//if the car is in violation, or nullptr if there is no violation.
 	ParkingTicket* inspect(const ParkedCar& car, const ParkingMeter& meter) const;
 
+
+	PoliceOfficer() = default;
 };
 
 #endif 

@@ -5,6 +5,7 @@ class ParkingMeter
 {
 	private:
 		int minutesPurchased;
+
 public:	
 	//Constructor
 	ParkingMeter(int minutesPurchased = 0);

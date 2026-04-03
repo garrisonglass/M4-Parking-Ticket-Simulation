@@ -2,11 +2,12 @@
 #define PARKINGTICKET_H
 
 #include "ParkedCar.h"
-#include "PoliceOfficer.h"
+//#include "PoliceOfficer.h"
 #include <string>
 #include <iostream>
-
+class PoliceOfficer;
 using namespace std;
+
 class ParkingTicket
 {
 	private:
@@ -26,7 +27,7 @@ class ParkingTicket
 		double fineAmount;
 
 		//Fine calculation constants
-		double calulateFine(int minutesOver) const;
+		double calculateFine(int minutesOver) const;
 
 	public:
 		//Constructor

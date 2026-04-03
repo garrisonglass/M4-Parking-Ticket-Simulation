@@ -1,5 +1,7 @@
 #include "ParkingTicket.h"
+#include "PoliceOfficer.h"
 #include <cmath>
+#include <ostream>
 
 using namespace std;
 //Constructor
@@ -16,11 +18,11 @@ ParkingTicket::ParkingTicket(const ParkedCar& car, const PoliceOfficer& officer,
 	badgeNumber = officer.getBadgeNumber();
 	//Set violation details
 	this->minutesOver = minutesOver;
-	fineAmount = calulateFine(minutesOver);
+	fineAmount = calculateFine(minutesOver);
 }
 
 //Fine calculation
-double ParkingTicket::calulateFine(int minutesOver) const
+double ParkingTicket::calculateFine(int minutesOver) const
 {
 	if (minutesOver <= 0)
 	{
