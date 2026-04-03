@@ -39,6 +39,16 @@ int main()
 	//return 0;
 	PrintTicket(ticket1);
 
+	//Test 2: Small violation (10 minutes over)
+	cout << "Test 2: Small Violation\n";
+
+	ParkedCar car2("2020", "Honda", "Civic", "Black", "123ABC", 70);//Parked 10 minutes over the limet
+	ParkingMeter meter2(60);//Purchased 60 minutes
+
+	ParkingTicket* ticket2 = officer.inspect(car2, meter2);
+
+	PrintTicket(ticket2);
+
 }
 
 //void printTicketResult(ParkingTicket* ticket)
