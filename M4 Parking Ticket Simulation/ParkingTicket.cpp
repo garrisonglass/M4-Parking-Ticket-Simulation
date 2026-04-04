@@ -52,6 +52,7 @@ ostream& operator<<(ostream& out, const ParkingTicket& ticket)
 	out << "------- Violation Details -------\n\n";
 	out << left << setw(width) << "Minutes Over: " << ticket.minutesOver << "\n";
 	out << left << setw(width) << "Fine:" << "$" << ticket.fineAmount;
+	out << "\n\n---------------------------------\n\n";
 	
 	return out;
 }

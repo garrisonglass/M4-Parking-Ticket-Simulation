@@ -7,6 +7,7 @@
 #include "PoliceOfficer.h"
 #include "ParkingTicket.h"
 #include "PrintTicket.h"
+#include "MultiCarLoop.h"
 
 using namespace std;
 
@@ -64,7 +65,27 @@ int main()
 	ParkingTicket* ticket4 = officer.inspect(car4, meter4);
 
 	PrintTicket(ticket4);
+
+	//Test 5: Multiple cars loop
+	cout << "Test 5: Multiple Cars Loop\n\n";
 	
+
+	ParkedCar cars[] = {
+		ParkedCar("2020", "Toyota", "C-HR", "White", "ABC123", 30), //No violation
+		ParkedCar("2020", "Honda", "Civic", "Black", "123ABC", 70), //Small violation
+		ParkedCar("2024", "Ford", "Mustang", "Red", "XYZ789", 179), //Large violation
+		ParkedCar("1973", "Chevrolet", "Corvette", "White", "LS454", 181) //Edge case
+	};
+
+	ParkingMeter meters[] = {
+		ParkingMeter(60), //Car 1
+		ParkingMeter(60), //Car 2
+		ParkingMeter(60), //Car 3
+		ParkingMeter(60)  //Car 4
+	};
+
+	MultiCarLoop(officer, cars, meters, 4);
+
 	return 0;
 
 }
