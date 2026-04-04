@@ -40,17 +40,18 @@ double ParkingTicket::calculateFine(int minutesOver) const
 
 ostream& operator<<(ostream& out, const ParkingTicket& ticket)
 {
+	const int width = 15; //Width for 
 	out << "-------- Parking Ticket ---------\n\n";
 	out << "Officer: " << ticket.officerName << ", Badge# " << ticket.badgeNumber << "\n\n";
 	out << "------ Vehicle Information ------\n\n";
-	out << left << setw(5) << "License Plate: " << ticket.plate << "\n";
-	out << left << setw(15) << "Year: " << ticket.year << "\n";
-	out << left << setw(15) << "Make: " << ticket.make << "\n";
-	out << left << setw(15) << "Model: " << ticket.model << "\n";
-	out << left << setw(15) << "Color: " << ticket.color << "\n\n";
+	out << left << setw(width) << "License Plate: " << ticket.plate << "\n";
+	out << left << setw(width) << "Year: " << ticket.year << "\n";
+	out << left << setw(width) << "Make: " << ticket.make << "\n";
+	out << left << setw(width) << "Model: " << ticket.model << "\n";
+	out << left << setw(width) << "Color: " << ticket.color << "\n\n";
 	out << "------- Violation Details -------\n\n";
-	out << left << setw(15) << "Minutes Over: " << ticket.minutesOver << "\n";
-	out << left << setw(15) << "Fine:" << "$" << ticket.fineAmount;
+	out << left << setw(width) << "Minutes Over: " << ticket.minutesOver << "\n";
+	out << left << setw(width) << "Fine:" << "$" << ticket.fineAmount;
 	
 	return out;
 }
