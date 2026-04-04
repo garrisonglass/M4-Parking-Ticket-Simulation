@@ -49,6 +49,24 @@ int main()
 
 	PrintTicket(ticket2);
 
+	//Test 3: Large violation (119 minutes over)
+	ParkedCar car3("2024", "Ford", "Mustang", "Red", "XYZ789", 179);//Parked 119 minutes over the limit
+	ParkingMeter meter3(60);//Purchased 60 minutes
+
+	ParkingTicket* ticket3 = officer.inspect(car3, meter3);
+
+	PrintTicket(ticket3);
+
+	//Test 4: Edge case (1 min past 2 hours over, 121 minutes)
+	ParkedCar car4("1973", "Chevrolet", "Corvette", "White", "LS454", 181);//Parked 121 minutes over the limit
+	ParkingMeter meter4(60);//Purchased 60 minutes
+
+	ParkingTicket* ticket4 = officer.inspect(car4, meter4);
+
+	PrintTicket(ticket4);
+	
+	return 0;
+
 }
 
 //void printTicketResult(ParkingTicket* ticket)
