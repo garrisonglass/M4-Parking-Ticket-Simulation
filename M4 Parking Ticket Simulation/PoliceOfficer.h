@@ -27,8 +27,6 @@ public:
 	//if the car is in violation, or nullptr if there is no violation.
 	ParkingTicket* inspect(const ParkedCar& car, const ParkingMeter& meter) const;
 
-
-	PoliceOfficer() = default;
 };
 
 #endif 
