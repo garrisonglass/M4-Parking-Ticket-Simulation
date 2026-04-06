@@ -1,5 +1,7 @@
 #include "ParkedCar.h"
 
+//Initializes a ParkedCar with descriptive information and parked duration.
+
 ParkedCar::ParkedCar(const string& year, 
 	                 const string& make, 
 	                 const string& model, 

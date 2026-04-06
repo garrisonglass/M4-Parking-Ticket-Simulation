@@ -4,6 +4,8 @@
 
 using namespace std;
 
+//Displays ticket information or reports no violation.
+//Deletes the ticket afterward to prevent memory leaks.
 void PrintTicket(ParkingTicket* ticket)
 {
 	if (ticket == nullptr)
@@ -13,6 +15,6 @@ void PrintTicket(ParkingTicket* ticket)
 	else
 	{
 		cout << *ticket << "\n\n";
-		delete ticket; // Clean up memory
+		delete ticket; //Clean up memory
 	}
 }

@@ -5,6 +5,9 @@
 
 using namespace std;
 
+//Represents a vehicle parked in a metered space.
+//Stores identifying details and how long the car has been parked.
+
 class ParkedCar
 
 {
@@ -20,7 +23,7 @@ private:
 
 public:
 	
-	//constructo
+	//Constructs a ParkedCar with descriptive information and parked duration.
 	ParkedCar(const string& year = "",
 		      const string& make = "",
 		      const string& model = "",
@@ -28,7 +31,7 @@ public:
 		      const string& plate = "",
 		      int minutesParked = 0);
 	
-	//Accessors
+	//Accessors for car details and parked time.
 	string getYear()    const { return year; }
 	string getMake()    const { return make; }
 	string getModel()   const { return model; }

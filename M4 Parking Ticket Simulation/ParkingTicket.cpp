@@ -5,7 +5,8 @@
 #include <iomanip>
 
 using namespace std;
-//Constructor
+//Initializes a ParkingTicket by copying car and officer details
+//and calculating the fine based on the violation duration.
 ParkingTicket::ParkingTicket(const ParkedCar& car, const PoliceOfficer& officer, int minutesOver)
 {
 	//Copy car information
@@ -29,15 +30,16 @@ double ParkingTicket::calculateFine(int minutesOver) const
 	{
 		return 0.0; //No fine if not over time
 	}
-	double hours = ceil(minutesOver / 60.0); //Calculate hours, rounding up
+	double hours = ceil(minutesOver / 60.0);//Calculate hours, rounding up
 	
 	if (hours <= 1)
 		return 25.0;
 
-	return 25.0 + (hours - 1) * 10.0; //Base fine + $10 for each additional hour
+	return 25.0 + (hours - 1) * 10.0;//Base fine + $10 for each additional hour
 	
 }
 
+//Outputs formatted ticket information for display.
 ostream& operator<<(ostream& out, const ParkingTicket& ticket)
 {
 	const int width = 15; //Width for 

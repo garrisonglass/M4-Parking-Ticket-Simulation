@@ -5,6 +5,8 @@
 #include "ParkingMeter.h"
 #include "PoliceOfficer.h"
 
+//Inspects multiple cars using the same officer.
+//Each car is paired with its corresponding parking meter.
 void MultiCarLoop(PoliceOfficer& officer,
 	              ParkedCar cars[],
 	              ParkingMeter meters[],

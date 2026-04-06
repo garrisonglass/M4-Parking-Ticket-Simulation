@@ -4,6 +4,8 @@
 
 using namespace std;
 
+//Iterates through a list of cars and meters,
+//inspecting each one and printing the resulting ticket.
 void MultiCarLoop(PoliceOfficer& officer, 
 	              ParkedCar cars[], 
 	              ParkingMeter meters[], 

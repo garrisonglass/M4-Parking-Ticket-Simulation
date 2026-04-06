@@ -2,23 +2,25 @@
 #define PARKINGTICKET_H
 
 #include "ParkedCar.h"
-//#include "PoliceOfficer.h"
 #include <string>
 #include <iostream>
-class PoliceOfficer;
-using namespace std;
 
+class PoliceOfficer;
+
+using namespace std;
+//Represents a parking violation ticket issued by an officer.
+//Stores car details, officer details, violation duration, and fine amount.
 class ParkingTicket
 {
 	private:
-		//CAr information
+		//CAr information copied from the ispected car
 		string year;
 		string make;
 		string model;
 		string color;
 		string plate;
 
-		//Officer information
+		//Officer information copied from the inspecting officer
 		string officerName;
 		string badgeNumber;
 
@@ -26,17 +28,18 @@ class ParkingTicket
 		int   minutesOver;
 		double fineAmount;
 
-		//Fine calculation constants
+		//Calculates the fine based on the number of minutes over the purchased time.
 		double calculateFine(int minutesOver) const;
 
 	public:
-		//Constructor
+		//Constructs a ParkingTicket using car and officer data.
 		ParkingTicket(const ParkedCar& car, const PoliceOfficer& officer, int minutesOver);
 		
-		//Accessor functions	
+		//Accessors for fine and violation duration.
 		double genFine()     const { return fineAmount; }
 		int getMinutesOver() const { return minutesOver; }
-
+		
+		//Outputs formatted ticket information.
 		friend ostream& operator<<(ostream& out, const ParkingTicket& ticket);
 };
 

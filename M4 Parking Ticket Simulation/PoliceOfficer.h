@@ -4,11 +4,13 @@
 #include <string>
 #include "ParkedCar.h"
 #include "ParkingMeter.h"
-//#include "ParkingTicket.h" 
+
 class ParkingTicket;
+
+
 using namespace std;
 
-
+//Represents a police officer responsible for inspecting parked cars.
 class PoliceOfficer
 {
 private:
@@ -16,10 +18,10 @@ private:
     string badgeNumber;
 
 public:
-	//Constructor
+	//Constructs an officer with a name and badge number.
 	PoliceOfficer(const string& officerName = "", const string& badge = "");
 
-	//Accessor functions
+	//Accessor for officer identity
 	string getName() const { return name; }
 	string getBadgeNumber() const { return badgeNumber; }
 
